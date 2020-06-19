@@ -1,6 +1,16 @@
-var path = require('path')
+const path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
+
+//aylien text api
+const aylien = require( "aylien-news-api" );
+
+//dot env
+const dotenv = require('dotenv');
+dotenv.config();
+
+//key from env file
+console.log(`Your API key is ${process.env.API_KEY}`);
 
 const app = express()
 
@@ -15,7 +25,7 @@ app.get('/', function (req, res) {
 
 // designates what port the app will listen to for incoming requests
 app.listen(8080, function () {
-    console.log('Example app listening on port 8080!')
+    console.log('app listening on port 8080!')
 })
 
 app.get('/test', function (req, res) {
