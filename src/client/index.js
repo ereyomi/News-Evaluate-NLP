@@ -1,4 +1,4 @@
-import { checkForName } from './js/nameChecker'
+import { updateUi } from './js/updateUi'
 import { handleSubmit } from './js/formHandler'
 
 import './styles/resets.scss';
@@ -8,6 +8,6 @@ import './styles/form.scss';
 import './styles/footer.scss';
 
 export {
-    checkForName,
+    updateUi,
     handleSubmit
 }
